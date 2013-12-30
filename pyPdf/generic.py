@@ -336,7 +336,8 @@ def readStringFromStream(stream):
                 # line break was escaped:
                 tok = ''
             else:
-                raise utils.PdfReadError("Unexpected escaped string")
+                tok = ''
+                #raise utils.PdfReadError("Unexpected escaped string")
         txt += tok
     return createStringObject(txt)
 
